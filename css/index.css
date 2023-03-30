@@ -10,7 +10,7 @@
   border-radius: 15px;
   box-shadow: 0px 0px 5px rgba(21, 21, 21, 0.163);
   margin: 25%;
-  padding: 2rem;
+  padding: 3rem;
   display: block;
   align-items: center;
   flex-direction: column;
@@ -20,13 +20,24 @@
   margin-bottom: 2rem;
 }
 
+.input {
+  width: 100%;
+  /* background-color: aquamarine; */
+}
+
 .input-head {
   margin-bottom: 0.5rem;
+  font-size: 24px;
 }
 
 .input-field {
   border: 1px solid rgb(0, 123, 255);
   border-radius: 12px;
-  padding: 1rem;
-  width: 80%;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+::placeholder {
+  padding-left: 1rem;
+  font-size: 16px;
 }
