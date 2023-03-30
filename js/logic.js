@@ -1,12 +1,14 @@
-// const root = document.getElementById("root");
-
-// // Console to see if it works
-// console.log("Hello");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const player = document.getElementById("playerScore");
+const computer = document.getElementById("computerScore");
 
 // Logic for the game
 let playerScore = 0;
 let computerScore = 0;
-let roundWinner = 0;
+let roundWinner = "";
+let newWinner;
 
 // Tie Declaration
 function round(playerChoice, computerChoice) {
@@ -16,22 +18,23 @@ function round(playerChoice, computerChoice) {
 
   //   Win Declaration
   if (
-    (playerChoice === ROCK && computerChoice === SCISSORS) ||
-    (playerChoice === SCISSORS && computerChoice === PAPER) ||
-    (playerChoice === PAPER && computerChoice === ROCK)
+    (playerChoice === "ROCK" && computerChoice === "SCISSORS") ||
+    (playerChoice === "SCISSORS" && computerChoice === "PAPER") ||
+    (playerChoice === "PAPER" && computerChoice === "ROCK")
   ) {
     playerScore++;
-    roundWinner = "Player";
+    // roundWinner = "Player";
+    newWinner = document.getElementById("winMsg").innerHTML = "Player";
   }
 
   //   Loss Declaration
   if (
-    (computerChoice === ROCK && playerChoice === SCISSORS) ||
-    (computerChoice === SCISSORS && playerChoice === PAPER) ||
-    (computerChoice === PAPER && playerChoice === ROCK)
+    (computerChoice === "ROCK" && playerChoice === "SCISSORS") ||
+    (computerChoice === "SCISSORS" && playerChoice === "PAPER") ||
+    (computerChoice === "PAPER" && playerChoice === "ROCK")
   ) {
     computerScore++;
-    roundWinner = "Computer";
+    newWinner = document.getElementById("winMsg").innerHTML = "Computer";
   }
 }
 
@@ -51,5 +54,12 @@ function isGameOver() {
   return playerScore === 5 || computerScore === 5;
 }
 
-//Game Function Declaration
-function game() {}
+function gameplay() {
+  if (playerScore === 5) {
+    return "Player Won";
+  } else {
+    return "Computer Won";
+  }
+}
+
+rock.addEventListener("click", console.log(rock));

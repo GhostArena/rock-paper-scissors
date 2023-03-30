@@ -10,17 +10,29 @@
   </head>
   <body>
     <div id="root">
-      <h1 class="header">Rock, Paper, Scissiors</h1>
+      <div class="header">
+        <h1>Rock, Paper, Scissiors</h1>
+        <p>A round of 5 to determine the winner</p>
+      </div>
 
       <!-- Input -->
       <div class="input">
         <h3 class="input-head">Choose your choice 🚀</h3>
         <div class="options">
-          <h1 class="option">🗿</h1>
-          <h1 class="option">📜</h1>
-          <h1 class="option">✂️</h1>
+          <button id="rock"><h1 class="option">🗿</h1></button>
+          <button id="paper"><h1 class="option">📜</h1></button>
+          <button id="scissors"><h1 class="option">✂️</h1></button>
         </div>
         <!-- <input type="text" placeholder="Select Choice" class="input-field"/> -->
+      </div>
+
+      <div class="score">
+        <h1>Score:</h1>
+        <div class="score-board">
+          <h1 id="playerScore">0</h1>
+          <h1 id="computerScore">0</h1>
+        </div>
+        <p>Winner: <strong id="winMsg">?</strong></p>
       </div>
     </div>
   </body>

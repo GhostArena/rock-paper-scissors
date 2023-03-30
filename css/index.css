@@ -7,9 +7,10 @@
 
 #root {
   /* border: 1px solid blue; */
+  background-color: white;
   border-radius: 15px;
   box-shadow: 0px 0px 5px rgba(21, 21, 21, 0.163);
-  margin: 25%;
+  margin: 25vh 25vw;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -17,7 +18,21 @@
 }
 
 .header {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 2rem; */
+}
+
+h1,
+p,
+h3 {
+  font-weight: 300;
+}
+
+.header > p {
+  font-size: 16px;
 }
 
 .input {
@@ -25,6 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2rem 0;
   /* background-color: aquamarine; */
 }
 
@@ -55,16 +71,32 @@
 
 .option {
   font-size: 60px;
-  padding: 1rem 2rem;
-  margin: 0 0.5rem;
-  box-shadow: 0px 4px 5px rgba(21, 21, 21, 0.074);
+
   /* border: 1px solid rgb(0, 123, 255); */
-  border-radius: 15px;
 }
 
-.option:hover {
+button:hover {
   background-color: coral;
   /* transform: scale(1.1); */
   transition: 0.5s;
   transition-timing-function: ease;
+}
+
+button {
+  background-color: white;
+  box-shadow: 0px 4px 5px rgba(21, 21, 21, 0.074);
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 15px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+
+.score-board > h1 {
+  font-size: 60px;
+  font-weight: 600;
 }
