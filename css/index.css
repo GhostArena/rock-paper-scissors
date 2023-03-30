@@ -61,3 +61,10 @@
   /* border: 1px solid rgb(0, 123, 255); */
   border-radius: 15px;
 }
+
+.option:hover {
+  background-color: coral;
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
